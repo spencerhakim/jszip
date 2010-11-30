@@ -39,6 +39,8 @@ function JSZip(compression)
    }
 }
 
+if (typeof exports === "object") exports.Zip = JSZip;
+
 /**
  * Add a file to the zip file
  * @param   name  The name of the file
