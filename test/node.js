@@ -12,4 +12,7 @@ img = zip.folder("images");
 img.add("smile.gif", imgData, {base64: true});
 content = zip.generate(true);
 
-fs.writeFile("test.zip", content, encoding='binary')
+fs.writeFile("test.zip", content, encoding='binary', function (err) {
+  if (err) throw err;
+  console.log("test.zip generated");
+});
